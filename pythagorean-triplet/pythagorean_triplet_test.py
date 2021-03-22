@@ -5,7 +5,7 @@ from pythagorean_triplet import triplets_with_sum
 
 # Python 2/3 compatibility
 if not hasattr(unittest.TestCase, "assertCountEqual"):
-    unittest.TestCase.assertCountEqual #= unittest.TestCase.assertItemsEqual
+    unittest.TestCase.assertCountEqual = unittest.TestCase.assertItemsEqual
 
 class PythagoreanTripletTest(unittest.TestCase):
     def test_triplets_whose_sum_is_12(self):
