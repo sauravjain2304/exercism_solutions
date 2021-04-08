@@ -13,7 +13,7 @@ def encode(message, rails):
   for i in memory:
     result.extend(i)
   return ''.join(result)
-print(encode("XOXOXOXOXOXOXOXOXO", 2))
+print(encode("XOXOXOXOXOXOXOXOXO", 4))
 
 def decode(encoded_message, rails):
   memory = [[] for i in range(rails)]
@@ -41,3 +41,4 @@ def decode(encoded_message, rails):
     result.append(memory[rail].pop(0))
     rail += direction
   return ''.join(result)
+print(decode("XXXXXXXXXOOOOOOOOO", 4))
